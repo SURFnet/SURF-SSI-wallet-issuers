@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * SAML 2.0 remote IdP metadata for SimpleSAMLphp.
+ *
+ * Remember to remove the IdPs you don't use from this file.
+ *
+ * See: https://simplesamlphp.org/docs/stable/simplesamlphp-reference-idp-remote
+ */
+$metadata['https://engine.test.surfconext.nl/authentication/idp/metadata'] = [
+    'name' => [
+        'en' => 'SURFconext test',
+        'nl' => 'SURFconext test',
+    ],
+    'SingleSignOnService' => 'https://engine.test.surfconext.nl/authentication/idp/single-sign-on/key:20190208',
+    'certificate' => 'engineblock.test.surfconext.nl.20190208.pem',
+ 
+    // convert OID formatted attributes from SAML assertion to 'name' similar to LDAP
+    // so they will be available as 'mail' and 'displayName'
+    'authproc' => [
+      50 => [
+        'class' => 'core:AttributeMap', 'oid2name',
+      ],
+    ],
+];

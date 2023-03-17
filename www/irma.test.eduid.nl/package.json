@@ -1,0 +1,10 @@
+{
+  "name": "saml_issuer",
+  "version": "0.1.0",
+  "repository": "https://github.com/privacybydesign/saml_issuer",
+  "license": "MIT",
+  "dependencies": {
+    "@privacybydesign/irma-frontend": "^0.4.3",
+    "jquery": "^3.4.1"
+  }
+}
